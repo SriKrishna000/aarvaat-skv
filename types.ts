@@ -1,8 +1,11 @@
-export enum GameState {
-  IDLE = 'IDLE',
-  RUNNING = 'RUNNING',
-  STOPPED = 'STOPPED',
-}
+// Using const object instead of enum for safer no-build runtime compatibility
+export const GameState = {
+  IDLE: 'IDLE',
+  RUNNING: 'RUNNING',
+  STOPPED: 'STOPPED',
+} as const;
+
+export type GameState = typeof GameState[keyof typeof GameState];
 
 export interface Statistics {
   history: number[];

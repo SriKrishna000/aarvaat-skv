@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { GameState, Statistics, NumberData } from './types';
-import { generateRandomBigNumber, formatBase10, toBase600, calculateAverage } from './utils/math';
-import { formatTime } from './utils/time';
-import { NumberDisplay } from './components/NumberDisplay';
-import { StatsPanel } from './components/StatsPanel';
-import { ActionButton } from './components/ActionButton';
+import { GameState, Statistics, NumberData } from './types.ts';
+import { generateRandomBigNumber, formatBase10, toBase600, calculateAverage } from './utils/math.ts';
+import { formatTime } from './utils/time.ts';
+import { NumberDisplay } from './components/NumberDisplay.tsx';
+import { StatsPanel } from './components/StatsPanel.tsx';
+import { ActionButton } from './components/ActionButton.tsx';
 
 const App: React.FC = () => {
   // Application State
@@ -17,7 +17,7 @@ const App: React.FC = () => {
   
   // Timer State
   const [elapsedTime, setElapsedTime] = useState<number>(0);
-  const requestRef = useRef<number>();
+  const requestRef = useRef<number>(0);
   const startTimeRef = useRef<number>(0);
 
   // Statistics State

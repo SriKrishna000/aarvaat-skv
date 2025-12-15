@@ -1,5 +1,5 @@
 import React from 'react';
-import { GameState } from '../types';
+import { GameState } from '../types.ts';
 
 interface NumberDisplayProps {
   base10: string;
