@@ -1,0 +1,5 @@
+{
+  "name": "Aarvaat Timer",
+  "description": "A high-precision reaction time challenge that generates massive integers and converts them into a base-600 number system.",
+  "requestFramePermissions": []
+}
